@@ -101,3 +101,32 @@ curl "http://localhost:3001/search?title=Twisted%20Wonderland&season=1&episode=6
   - Title: `.link a`
   - Links: `.links a.dlink, .links a[href^="magnet:"]`
 
+## Deploy to Vercel
+
+- This project is configured for Vercel serverless with `vercel.json`.
+- The Express app is exported from `api/index.js`, so routes are available under `/api` in production.
+
+### Steps
+```pwsh
+# Install deps
+npm install
+
+# Login & initialize (optional)
+vercel login
+vercel init
+
+# Deploy
+vercel deploy --prod
+```
+
+### Production URLs
+- Health: `/api/`
+- Build query: `POST /api/query`
+- Search: `GET /api/search?title=...&season=...&episode=...`
+
+### Local Vercel Dev
+```pwsh
+vercel dev
+```
+Serves at `http://localhost:3000` with routes under `/api`.
+
