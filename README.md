@@ -120,13 +120,13 @@ vercel deploy --prod
 ```
 
 ### Production URLs
-- Health: `/api/`
-- Build query: `POST /api/query`
-- Search: `GET /api/search?title=...&season=...&episode=...`
+- Health: `/`
+- Build query: `POST /query`
+- Search: `GET /search?title=...&season=...&episode=...`
 
 ### Local Vercel Dev
 ```pwsh
 vercel dev
 ```
-Serves at `http://localhost:3000` with routes under `/api`.
+
 
